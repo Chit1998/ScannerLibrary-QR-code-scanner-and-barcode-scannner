@@ -21,5 +21,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Scanner Library"
-include(":app", ":Scanner")
+//rootProject.name = "Scanner Library"
+rootProject.name = "ScannerLibrary-QR-code-scanner-and-barcode-scannner"
+include(":app",)
+include(":scannerlibrary")

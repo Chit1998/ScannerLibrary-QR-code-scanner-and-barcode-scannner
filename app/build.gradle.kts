@@ -46,7 +46,7 @@ android {
 
 dependencies {
 
-    implementation(project(":Scanner"))
+    implementation(project(":scannerlibrary"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
