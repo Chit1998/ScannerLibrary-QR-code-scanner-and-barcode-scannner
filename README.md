@@ -16,27 +16,32 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-
+```
 ---
 
 ## Then add dependency:
+```gradle
 dependencies {
-    implementation 'com.github.yourusername:scannerlibrary:1.0.0'
+    implementation 'com.github.chit1998:scannerlibrary:1.0.0'
 }
-
-1. Declare permission in your AndroidManifest.xml
+```
+## 1. Declare permission in your AndroidManifest.xml
+```gradle
 <uses-permission android:name="android.permission.CAMERA" />
+```
 
-2. Start scanner from your Activity
+## 3. Start scanner from your Activity
+```gradle
 Scanner.start(
     this,
     cameraTime = 30_000,          // auto-close after 30 sec
     visibilityFlash = true,       // enable flash toggle
     cameraFacing = Scanner.CameraFacing.BACK
 )
+```
 
-3. Handle result
-
+## 5. Handle result
+```gradle
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
     if (requestCode == Scanner.REQUEST_CODE && data != null) {
@@ -44,3 +49,4 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
         Toast.makeText(this, "Scanned: $scannedText", Toast.LENGTH_SHORT).show()
     }
 }
+```
