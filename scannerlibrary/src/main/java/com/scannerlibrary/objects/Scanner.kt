@@ -3,7 +3,7 @@ package com.scannerlibrary.objects
 import android.app.Activity
 import android.content.Intent
 import androidx.annotation.RawRes
-import com.scannerlibrary.R
+import com.chit1998.scannerlibrary.R
 import com.scannerlibrary.ScannerActivity
 
 object Scanner {
