@@ -23,6 +23,7 @@ dependencyResolutionManagement {
 ```gradle
 dependencies {
     implementation 'com.github.chit1998:scannerlibrary:1.0.0'
+    implementation("com.github.Chit1998:ScannerLibrary-QR-code-scanner-and-barcode-scannner:v1.0.0")
 }
 ```
 ## 1. Declare permission in your AndroidManifest.xml
