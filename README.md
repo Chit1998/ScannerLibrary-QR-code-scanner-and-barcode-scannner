@@ -30,7 +30,7 @@ dependencies {
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-## 3. Start scanner from your Activity
+## 2. Start scanner from your Activity
 ```gradle
 Scanner.start(
     this,
@@ -40,7 +40,7 @@ Scanner.start(
 )
 ```
 
-## 5. Handle result
+## 3. Handle result
 ```gradle
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
