@@ -16,30 +16,27 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-Then add dependency:
 
-gradle
-Copy code
+---
+
+## Then add dependency:
 dependencies {
     implementation 'com.github.yourusername:scannerlibrary:1.0.0'
 }
-📌 Usage
+
 1. Declare permission in your AndroidManifest.xml
-xml
-Copy code
 <uses-permission android:name="android.permission.CAMERA" />
+
 2. Start scanner from your Activity
-kotlin
-Copy code
 Scanner.start(
     this,
     cameraTime = 30_000,          // auto-close after 30 sec
     visibilityFlash = true,       // enable flash toggle
     cameraFacing = Scanner.CameraFacing.BACK
 )
+
 3. Handle result
-kotlin
-Copy code
+
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
     if (requestCode == Scanner.REQUEST_CODE && data != null) {
