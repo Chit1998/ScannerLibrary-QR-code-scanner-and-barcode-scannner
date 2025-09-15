@@ -2,6 +2,31 @@
 
 An easy-to-use Android library for scanning QR codes and barcodes using **CameraX** and **MLKit**.
 
+Overview
+ScannerLibrary is a powerful Kotlin library designed for Android developers who want to add QR code and barcode scanning functionality to their apps effortlessly. The library is lightweight, fast, and fully customizable, making it ideal for both small and large applications.
+
+Features
+
+✅ Scan QR codes and barcodes quickly
+
+✅ Easy integration into any Android project
+
+✅ Supports custom camera settings
+
+✅ Optional flash control for low-light environments
+
+✅ Lightweight and fast scanning with minimal battery usage
+
+Why Choose ScannerLibrary?
+
+Simple Setup: Just add the dependency and start scanning.
+
+Customizable: Control camera, flash, and scanning behavior.
+
+Optimized for Android: Works on most devices with smooth performance.
+
+Open Source: Free to use and modify for your projects.
+
 ---
 
 ## 🚀 Installation
