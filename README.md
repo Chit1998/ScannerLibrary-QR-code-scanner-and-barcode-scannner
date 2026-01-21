@@ -91,7 +91,7 @@ private val scanResultLauncher =
         }
     }
 ```
-## if you use 3.0 section then no need to use 3.1 and 3.2 section and use 3.1 section then use 3.2 also, no need 3.0 section
+## If you use 3.0 section then no need to use 3.1 and 3.2 section and use 3.1 section then use 3.2 also, no need 3.0 section
 
 ## 4. Add activity in your manifest
 ```gradle
