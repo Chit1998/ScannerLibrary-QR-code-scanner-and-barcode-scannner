@@ -75,3 +75,9 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
     }
 }
 ```
+## 3. add activity in your manifest
+```gradle
+<activity android:name="com.scannerlibrary.ScannerActivity"
+    android:exported="false"/>
+```
+
