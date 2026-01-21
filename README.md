@@ -65,7 +65,7 @@ Scanner.start(
 )
 ```
 
-## 3. Handle result
+## 3. Handle result 3.0
 ```gradle
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
@@ -75,7 +75,25 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
     }
 }
 ```
-## 3. Add activity in your manifest
+## 3. Handle result 3.1 Inside OnCreate 
+```gradle
+val intent = Intent(this, Scanner::class.java)
+scanResultLauncher.launch(intent)
+```
+## 3 Handle result 3.2 Outside OnCreate
+```gradle
+private val scanResultLauncher =
+    registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val data = result.data
+            val scannedText = data?.getStringExtra(Scanner.EXTRA_RESULT)
+            Toast.makeText(this,"Scanned: $scannedText",Toast.LENGTH_SHORT).show()
+        }
+    }
+```
+## if you use 3.0 section then no need to use 3.1 and 3.2 section and use 3.1 section then use 3.2 also, no need 3.0 section
+
+## 4. Add activity in your manifest
 ```gradle
 <activity android:name="com.scannerlibrary.ScannerActivity"
     android:exported="false"/>
