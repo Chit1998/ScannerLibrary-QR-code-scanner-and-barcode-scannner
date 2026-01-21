@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
+group = "com.github.Chit1998"
+version = "1.0.2"
 android {
     namespace = "com.chit1998.scannerlibrary"
     compileSdk = 36
