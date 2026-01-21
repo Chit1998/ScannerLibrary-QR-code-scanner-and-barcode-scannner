@@ -69,13 +69,26 @@ class ScannerActivity : AppCompatActivity() {
 
         startCamera(cameraFacing, soundId)
 
-        // 🔹 Auto-close after cameraTime
+        // // 🔹 Auto-close after cameraTime
+        // timer = Timer()
+        // timer.schedule(object : TimerTask() {
+        //     override fun run() {
+        //         finish()
+        //     }
+        // }, cameraTime)
         timer = Timer()
         timer.schedule(object : TimerTask() {
             override fun run() {
-                finish()
+                Handler(Looper.getMainLooper()).post {
+        
+                    val activity = context as? Activity ?: return@post
+        
+                    // Clear entire task and close app flow
+                    activity.finishAffinity()
+                }
             }
         }, cameraTime)
+
     }
 
     @OptIn(ExperimentalGetImage::class)
