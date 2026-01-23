@@ -1,9 +1,12 @@
 package com.scannerlibrary
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.OptIn
@@ -81,10 +84,10 @@ class ScannerActivity : AppCompatActivity() {
             override fun run() {
                 Handler(Looper.getMainLooper()).post {
         
-                    val activity = context as? Activity ?: return@post
-        
-                    // Clear entire task and close app flow
-                    activity.finishAffinity()
+//                    val activity = context as? Activity ?: return@post
+//                    // Clear entire task and close app flow
+//                    activity.finishAffinity()
+                    closeApp(this@ScannerActivity)
                 }
             }
         }, cameraTime)
@@ -193,6 +196,12 @@ class ScannerActivity : AppCompatActivity() {
                 setResult(RESULT_CANCELED)
                 finish()
             }
+        }
+    }
+
+    fun closeApp(activity: Activity) {
+        Handler(Looper.getMainLooper()).post {
+            activity.finishAffinity()
         }
     }
 
