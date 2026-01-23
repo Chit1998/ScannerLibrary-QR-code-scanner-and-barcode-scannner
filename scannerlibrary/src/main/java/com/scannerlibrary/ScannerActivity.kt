@@ -83,7 +83,6 @@ class ScannerActivity : AppCompatActivity() {
         timer.schedule(object : TimerTask() {
             override fun run() {
                 Handler(Looper.getMainLooper()).post {
-        
 //                    val activity = context as? Activity ?: return@post
 //                    // Clear entire task and close app flow
 //                    activity.finishAffinity()
